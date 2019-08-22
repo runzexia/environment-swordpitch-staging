@@ -1,0 +1,50 @@
+Step: step-credential-initializer-kz8h2:
+
+{"level":"warn","ts":1566488882.7399647,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566488882.7417712,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-9gnw2:
+
+{"level":"warn","ts":1566488883.7487156,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1566488883.7503603,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-********-environment-sword-6h7zm:
+
+{"level":"warn","ts":1566488892.1805072,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566488893.5712016,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-swordpitch-staging.git @ b8293cc5a7aeabd6792fe33297f38653ef892a3c in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:b8293cc5a7aeabd6792fe33297f38653ef892a3c,4:55e6611ea3e7d600fd84a0ed0b5d0b01478dfb52","time":"2019-08-22T15:48:13Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 55e6611ea3e7d600fd84a0ed0b5d0b01478dfb52: b8293cc5a7aeabd6792fe33297f38653ef892a3c: in ","time":"2019-08-22T15:48:15Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-22T15:48:15Z"}
+{"level":"debug","msg":"ran git reset --hard b8293cc5a7aeabd6792fe33297f38653ef892a3c in ","time":"2019-08-22T15:48:15Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-22T15:48:15Z"}
+{"level":"debug","msg":"ran git merge 55e6611ea3e7d600fd84a0ed0b5d0b01478dfb52 in ","time":"2019-08-22T15:48:15Z"}
+MERGED SHA SUBJECT
+55e6611ea  chore: Promote wuhan-test to version 0.0.3
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin 55e6611ea3e7d600fd84a0ed0b5d0b01478dfb52: b8293cc5a7aeabd6792fe33297f38653ef892a3c: in ","time":"2019-08-22T15:48:17Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-22T15:48:17Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-22T15:48:17Z"}
+{"level":"debug","msg":"ran git reset --hard b8293cc5a7aeabd6792fe33297f38653ef892a3c in ","time":"2019-08-22T15:48:17Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-22T15:48:17Z"}
+{"level":"debug","msg":"ran git merge 55e6611ea3e7d600fd84a0ed0b5d0b01478dfb52 in ","time":"2019-08-22T15:48:17Z"}
+MERGED SHA SUBJECT
+55e6611ea  chore: Promote wuhan-test to version 0.0.3
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-22T15:48:18Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-22T15:48:18Z"}
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-22T15:48:22Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-22T15:48:27Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for ********-environment-swordpitch-staging-PR-4-1","time":"2019-08-22T15:48:29Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-22T15:48:29Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-22T15:48:29Z"}
+{"level":"info","msg":"upserted PipelineResource ********-environment-swordpitch for the git repository https://github.com/********/environment-swordpitch-staging.git and branch PR-4","time":"2019-08-22T15:48:29Z"}
+{"level":"info","msg":"upserted Task ********-environment-swordpitch-frm4h-from-build-pack-1","time":"2019-08-22T15:48:29Z"}
+{"level":"info","msg":"upserted Pipeline ********-environment-swordpitch-frm4h-1","time":"2019-08-22T15:48:29Z"}
+{"level":"info","msg":"created PipelineRun ********-environment-swordpitch-frm4h-1","time":"2019-08-22T15:48:29Z"}
+{"level":"info","msg":"created PipelineStructure ********-environment-swordpitch-frm4h-1","time":"2019-08-22T15:48:29Z"}
